@@ -155,11 +155,11 @@
     themeToggle.addEventListener('change', function() {
       if (this.checked) {
         body.classList.add('light-mode');
-        toggleLabel.textContent = '☀️';
+        toggleLabel.textContent = 'LIGHT MODE☀️';
         localStorage.setItem('theme', 'light');
       } else {
         body.classList.remove('light-mode');
-        toggleLabel.textContent = '🌙';
+        toggleLabel.textContent = 'DARK MODE🌙';
         localStorage.setItem('theme', 'dark');
       }
     });
