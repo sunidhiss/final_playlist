@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
   <meta charset="UTF-8">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.0/dist/tailwind.min.css" rel="stylesheet">
-    <title>Sunidhi's Top 10 Songs</title>
+  <title>Sunidhi's Top 10 Songs</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,6 +12,10 @@
       margin: 0;
       padding: 0;
       text-align: center;
+    }
+    body.light-mode {
+      background: #f8f9fa;
+      color: #333;
     }
     h1 {
       margin: 20px;
@@ -34,6 +37,10 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.6);
       transition: transform 0.3s;
     }
+    body.light-mode .song {
+      background: #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
     .song:hover {
       transform: scale(1.05);
     }
@@ -50,9 +57,24 @@
       text-decoration: none;
       color: inherit;
     }
+    .toggle-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
   </style>
 </head>
-<body class="bg-Indigo-900">
+<body class="bg-indigo-900">
+  <!-- Dark Theme Toggle -->
+  <div class="toggle-container">
+    <label class="inline-flex items-center cursor-pointer">
+      <input type="checkbox" id="theme-toggle" class="sr-only peer">
+      <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+      <span class="ms-3 text-sm font-medium text-white" id="toggle-label">🌙</span>
+    </label>
+  </div>
+
   <h1>🎶 Sunidhi's Top 10 Favourite Songs 🎶</h1>
   <p id="quotes"></p>
 
@@ -60,7 +82,6 @@
     <div class="song">
       <a href="https://open.spotify.com/track/19XpFsce28aByvCC4g89tJ?si=a11c7e422a994c73" target="_blank">
         <img src="https://raw.githubusercontent.com/sunidhiss/final_playlist/refs/heads/main/images_play/hozier.jpg">
-
         <p>Too Sweet - Hozier</p>
       </a>
     </div>
@@ -119,7 +140,29 @@
       </a>
     </div>
   </div>
-  <script src="your-script.js"></script>
 
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const toggleLabel = document.getElementById('toggle-label');
+    const body = document.body;
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      body.classList.add('light-mode');
+      themeToggle.checked = true;
+      toggleLabel.textContent = '☀️';
+    }
+
+    themeToggle.addEventListener('change', function() {
+      if (this.checked) {
+        body.classList.add('light-mode');
+        toggleLabel.textContent = '☀️';
+        localStorage.setItem('theme', 'light');
+      } else {
+        body.classList.remove('light-mode');
+        toggleLabel.textContent = '🌙';
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  </script>
 </body>
 </html>
