@@ -3,119 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <title>Sunidhi's Top 10 Songs</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #121212;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    h1 {
-      margin: 20px;
-      font-size: 2em;
-      color: #1DB954;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      padding: 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .song {
-      background: #1e1e1e;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-      transition: transform 0.3s;
-    }
-    .song:hover {
-      transform: scale(1.05);
-    }
-    .song img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .song p {
-      margin: 10px 0;
-      font-size: 1em;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <h1>🎶 Sunidhi's Top 10 Favourite Songs 🎶</h1>
-  <div class="grid">
-    <div class="song">
-      <a href="https://open.spotify.com/track/19XpFsce28aByvCC4g89tJ?si=a11c7e422a994c73" target="_blank">
-        <img src="https://raw.githubusercontent.com/sunidhiss/final_playlist/refs/heads/main/images_play/hozier.jpg">
+<body class="bg-gray-900 text-white min-h-screen flex flex-col items-center">
+  <h1 class="mt-8 mb-4 text-3xl font-bold text-green-500">
+    🎶 Sunidhi's Top 10 Favourite Songs 🎶
+  </h1>
+  <p id="quotes" class="mb-4"></p>
 
-        <p>Too Sweet - Hozier</p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-6 w-full max-w-6xl">
+    
+    <!-- Too Sweet - Hozier -->
+    <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform">
+      <a href="https://open.spotify.com/track/19XpFsce28aByvCC4g89tJ?si=a11c7e422a994c73" target="_blank">
+        <img src="https://raw.githubusercontent.com/sunidhiss/final_playlist/refs/heads/main/images_play/hozier.jpg" class="w-full h-52 object-cover" />
+        <p class="my-2 text-lg">Too Sweet - Hozier</p>
       </a>
     </div>
-    <div class="song">
+
+    <!-- Family Line - Conan Gray -->
+    <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform">
       <a href="https://open.spotify.com/track/0iNZGC211wst3VjtobNnC5?si=6cfce5f7050b49a9" target="_blank">
-        <img src="https://raw.githubusercontent.com/sunidhiss/final_playlist/refs/heads/main/images_play/conan-family_line.jpg" alt="Family Line - Conan Gray">
-        <p>Family Line - Conan Gray</p>
+        <img src="https://raw.githubusercontent.com/sunidhiss/final_playlist/refs/heads/main/images_play/conan-family_line.jpg" alt="Family Line - Conan Gray" class="w-full h-52 object-cover" />
+        <p class="my-2 text-lg">Family Line - Conan Gray</p>
       </a>
     </div>
-    <div class="song">
+
+    <!-- All The Stars - SZA, Kendrick -->
+    <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform">
       <a href="https://open.spotify.com/track/3GCdLUSnKSMJhs4Tj6CV3s?si=18b8e28414704c5b" target="_blank">
-        <img src="https://raw.githubusercontent.com/sunidhiss/final_playlist/refs/heads/main/images_play/sza-all.jpg" alt="All the stars- SZA and kendrick lamar">
-        <p>All The Stars - SZA, Kendrick</p>
+        <img src="https://raw.githubusercontent.com/sunidhiss/final_playlist/refs/heads/main/images_play/sza-all.jpg" alt="All the stars- SZA and kendrick lamar" class="w-full h-52 object-cover" />
+        <p class="my-2 text-lg">All The Stars - SZA, Kendrick</p>
       </a>
     </div>
-    <div class="song">
+
+    <!-- Sweater Weather - The Neighbourhood -->
+    <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform">
       <a href="https://open.spotify.com/track/2QjOHCTQ1Jl3zawyYOpxh6?si=923d49a98a414412" target="_blank">
-        <img src="https://raw.githubusercontent.com/sunidhiss/final_playlist/refs/heads/main/images_play/neighbourhood.jpg" alt="Sweater Weather - The Neighbourhood">
-        <p>Sweater Weather - The Neighbourhood</p>
+        <img src="https://raw.githubusercontent.com/sunidhiss/final_playlist/refs/heads/main/images_play/neighbourhood.jpg" alt="Sweater Weather - The Neighbourhood" class="w-full h-52 object-cover" />
+        <p class="my-2 text-lg">Sweater Weather - The Neighbourhood</p>
       </a>
     </div>
-    <div class="song">
+
+    <!-- 505 - Arctic Monkeys -->
+    <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform">
       <a href="https://open.spotify.com/track/0BxE4FqsDD1Ot4YuBXwAPp?si=4af0856e0ab44cf3" target="_blank">
-        <img src="https://raw.githubusercontent.com/sunidhiss/final_playlist/refs/heads/main/images_play/arctic.jpg" alt="505-Arctic monkeys">
-        <p>505 - Arctic Monkeys</p>
+        <img src="https://raw.githubusercontent.com/sunidhiss/final_playlist/refs/heads/main/images_play/arctic.jpg" alt="505-Arctic monkeys" class="w-full h-52 object-cover" />
+        <p class="my-2 text-lg">505 - Arctic Monkeys</p>
       </a>
     </div>
-    <div class="song">
+
+    <!-- K - Cigarettes After Sex -->
+    <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform">
       <a href="https://open.spotify.com/track/4mV04JkZYIRW4xV5t2nEhp" target="_blank">
-        <img src="https://raw.githubusercontent.com/sunidhiss/final_playlist/refs/heads/main/images_play/cas-k.jpg" alt="K-CAS">
-        <p>K - Cigarettes After Sex</p>
+        <img src="https://raw.githubusercontent.com/sunidhiss/final_playlist/refs/heads/main/images_play/cas-k.jpg" alt="K-CAS" class="w-full h-52 object-cover" />
+        <p class="my-2 text-lg">K - Cigarettes After Sex</p>
       </a>
     </div>
-    <div class="song">
+
+    <!-- Sofia - Clairo -->
+    <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform">
       <a href="https://open.spotify.com/track/2xGjfbXZnI8uQDhukoQURQ?si=7837f37bf768416ch" target="_blank">
-        <img src="https://raw.githubusercontent.com/sunidhiss/final_playlist/refs/heads/main/images_play/clairo-sofia.jpg" alt="Sofia - Clairo">
-        <p>Sofia - Clairo</p>
+        <img src="https://raw.githubusercontent.com/sunidhiss/final_playlist/refs/heads/main/images_play/clairo-sofia.jpg" alt="Sofia - Clairo" class="w-full h-52 object-cover" />
+        <p class="my-2 text-lg">Sofia - Clairo</p>
       </a>
     </div>
-    <div class="song">
+
+    <!-- Heather - Conan Gray -->
+    <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform">
       <a href="https://open.spotify.com/track/4xqrdfXkTW4T0RauPLv3WA?si=370952bd7d434040" target="_blank">
-        <img src="https://raw.githubusercontent.com/sunidhiss/final_playlist/refs/heads/main/images_play/conan-heather.jpg" alt="Heather - Conan Gray">
-        <p>Heather - Conan Gray</p>
+        <img src="https://raw.githubusercontent.com/sunidhiss/final_playlist/refs/heads/main/images_play/conan-heather.jpg" alt="Heather - Conan Gray" class="w-full h-52 object-cover" />
+        <p class="my-2 text-lg">Heather - Conan Gray</p>
       </a>
     </div>
-    <div class="song">
+
+    <!-- My Love Mine All Mine - Mitski -->
+    <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform">
       <a href="https://open.spotify.com/track/3vkCueOmm7xQDoJ17W1Pm3?si=fd322038544d4d58" target="_blank">
-        <img src="https://raw.githubusercontent.com/sunidhiss/final_playlist/refs/heads/main/images_play/mitski-my_love.jpg" alt="My Love Mine All Mine - Mitski">
-        <p>My Love Mine All Mine - Mitski</p>
+        <img src="https://raw.githubusercontent.com/sunidhiss/final_playlist/refs/heads/main/images_play/mitski-my_love.jpg" alt="My Love Mine All Mine - Mitski" class="w-full h-52 object-cover" />
+        <p class="my-2 text-lg">My Love Mine All Mine - Mitski</p>
       </a>
     </div>
-    <div class="song">
+
+    <!-- That's So True - Gracie Abrams -->
+    <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform">
       <a href="https://open.spotify.com/track/7ne4VBA60CxGM75vw0EYad?si=f7aa841b1d7049b7" target="_blank">
-        <img src="https://raw.githubusercontent.com/sunidhiss/final_playlist/refs/heads/main/images_play/gracie.jpg" alt="thats so true-Gracie Abrams">
-        <p>That's So True - Gracie Abrams</p>
+        <img src="https://raw.githubusercontent.com/sunidhiss/final_playlist/refs/heads/main/images_play/gracie.jpg" alt="thats so true-Gracie Abrams" class="w-full h-52 object-cover" />
+        <p class="my-2 text-lg">That's So True - Gracie Abrams</p>
       </a>
     </div>
   </div>
-  <script src="your-script.js"></script>
 
+  <script src="your-script.js"></script>
 </body>
 </html>
